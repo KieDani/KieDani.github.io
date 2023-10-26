@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        <title>Towards Learning Monocular 3D Object Localization From 2D Labels using the Physical Laws of Motion</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Segoe+UI" rel="stylesheet">
+    </head>
+    <body>
+        <div class="n-title">
+            <h1> Towards Learning Monocular 3D Object Localization From 2D Labels using the Physical Laws of Motion </h1>
+        </div>
+        <div class="n-byline">
+            <div class="byline">
+                <ul class="authors">
+                    <li> <a href="https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/team/kienzle/" target="_blank">Daniel Kienzle</a> 
+                    </li>
+                    <li> <a href="https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/team/lorenz/" target="_blank">Julian Lorenz</a>
+                    </li>
+                    <li> <a href="https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/team/ludwig/" target="_blank">Katja Ludwig</a>
+                    </li>
+                    <li> <a href="https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/team/lienhart/" target="_blank">Prof. Dr. Rainer Lienhart</a>
+                    </li>
+                </ul>
+                <ul class="authors affiliations">
+                    <li>
+                        <a href="https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/about-us/" target="_blank">University of Augsburg</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="n-article">
+            <!-- teaser -->
+            <img src="images/overview.png" />
+
+            <!-- abstract -->
+            <h2 id="abstract"> Abstract </h2>
+            <p> We present a novel method for precise 3D object localization in single images from a single calibrated camera using only 2D labels. 
+				No expensive 3D labels are needed. Thus, instead of using 3D labels, our model is trained with easy-to-annotate 2D labels along with the physical knowledge of the object's motion. 
+				Given this information, the model can infer the latent third dimension, even though it has never seen this information during training. 
+				Our method is evaluated on both synthetic and real-world datasets, and we are able to achieve a mean distance error of just 6 cm in our experiments on real data. 
+				The results indicate the method's potential as a step towards learning 3D object location estimation, where collecting 3D data for training is not feasible.
+			</p>
+
+            <!-- paper links -->
+            <h2 id="links"> Links </h2>
+			<p> Our paper was accepted at International Conference on 3D Vision 2024. The link to the dataset and to the code will be added soon. Stay tuned! </p>
+            <div class="grid download-section">
+                <div class="download-thumb">
+                    <a href="/" target="_blank">
+                        <img class="dropshadow" src="images/datasets.png" />
+                    </a>
+                </div>
+                <div class="download-links">
+                    <ul>
+                        <li>
+                            <a href="http://example.com/" target="_blank"> Paper PDF</a>
+                        </li>
+                        <li>
+                            <a href="http://example.com/"  target="_blank">Dataset</a>
+                        </li>
+                        <li>
+                            <a href="http://example.com/" target="_blank"> Code on GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+
+			<h2 id="citation"> Citation </h2>
+			<p> If you find this paper helpful, please consider citing: </p>
+			<pre class="bibtex">
+				@article{kienzle3dv2024,
+				  author  = {Daniel Kienzle and Julian Lorenz and Katja Ludwig and Rainer Lienhart},
+				  title   = {Towards Learning Monocular 3D Object Localization From 2D Labels using the Physical Laws of Motion},
+				  journal = {Proceedings of the International Conference on 3D Vision 2024 (3DV)},
+				  year    = {2024},
+				}
+			</pre>
+
+
+            <h2 id="license"> License </h2>
+            <p> 
+                The structure of this page is taken and modified from <a href="https://nvlabs.github.io/eg3d/">nvlabs.github.io/eg3d</a> which was published under the
+                <a href="https://nvlabs-fi-cdn.nvidia.com/_web/stylegan3/LICENSE.txt"> Creative Commons CC BY-NC 4.0
+                license </a>. 
+            </p>
+
+
+
+            <!--
+            <h2 id="acknowledgments"> Acknowledgments </h2>
+            <p>
+                
+            </p>
+            -->
+
+        </div>
+    </body>
+</html>
