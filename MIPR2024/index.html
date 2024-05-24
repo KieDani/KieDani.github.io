@@ -30,16 +30,28 @@
 
         <div class="n-article">
             <!-- teaser -->
-            <img src="images/cover_including_poses.png" />
+            <img src="images/cover.png", style="width: 100%; height: auto;"/>
+            <img src="images/posen_paper.png", style="width: 50%; height: auto; left: 25%;"/>
 
             <!-- abstract -->
             <h2 id="abstract"> Abstract </h2>
-            <p> TODO
+            <p> Utilizing transformer architectures for semantic segmentation of high-resolution images is hindered by the attention's quadratic computational complexity in the number of tokens. A solution to this challenge involves decreasing the number of tokens through token merging, which has exhibited remarkable enhancements in inference speed, training efficiency, and memory utilization for image classification tasks. In this paper, we explore various token merging strategies within the framework of the Segformer architecture and perform experiments on multiple semantic segmentation and human pose estimation datasets. Notably, without model re-training, we, for example, achieve an inference acceleration of 61% on the Cityscapes dataset while maintaining the mIoU performance. Consequently, this paper facilitates the deployment of transformer-based architectures on resource-constrained devices and in real-time applications. 
 			</p>
 
             <!-- paper links -->
             <h2 id="links"> Links </h2>
-			<p> This page is still work in progress. Stay tuned! </p>
+            <p> Our paper was accepted at IEEE International Conference on Multimedia Information Processing and Retrieval (MIPR) 2024. Find the paper below. Code and weights will be added soon. </p>
+                    <ul>
+                        <li>
+                            <a href="https://arxiv.org/abs/2405.14467" target="_blank"> Paper PDF</a>
+                        </li>
+                        <li>
+                            <a href="https://www.example.com" target="_blank"> Code on GitHub</a>
+                        </li>
+                        <li>
+                            <a href="https://www.example.com"  target="_blank">Weights</a>
+                        </li>
+                    </ul>
 
             </div>
 
@@ -47,7 +59,7 @@
 			<h2 id="citation"> Citation </h2>
 			<p> If you find this paper helpful, please consider citing: </p>
 			<pre class="bibtex">
-                @article{kienzle3dv2024,
+                @article{kienzlemipr2024,
                   author  = {Daniel Kienzle and Marco Kantonis and Robin Schön and Rainer Lienhart},
                   title   = {Segformer++: Efficient Token-Merging Strategies for High-Resolution Semantic Segmentation},
                   journal = {Proceedings of the 7th International Conference on Multimedia Information Processing and Retrieval (MIPR)},
