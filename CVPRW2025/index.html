@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        <title>Towards Learning Monocular 3D Object Localization From 2D Labels using the Physical Laws of Motion</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Segoe+UI" rel="stylesheet">
+    </head>
+    <body>
+        <div class="n-title">
+            <h1> Towards Learning Monocular 3D Object Localization From 2D Labels using the Physical Laws of Motion </h1>
+        </div>
+        <div class="n-byline">
+            <div class="byline">
+                <ul class="authors">
+                    <li> <a href="https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/team/kienzle/" target="_blank">Daniel Kienzle<sup>1,2</sup></a> 
+                    </li>
+                    <li> <a href="https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/team/schoen/" target="_blank">Robin Schön<sup>1</sup></a>
+                    </li>
+                    <li> <a href="https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/team/lienhart/" target="_blank">Rainer Lienhart<sup>1</sup></a>
+                    </li>
+                    <li> <a href="https://research.nii.ac.jp/~satoh/index.html" target="_blank">Shin'Ichi Satoh<sup>2</sup></a>
+                </ul>
+                <ul class="authors affiliations">
+                    <li>
+                        <a href="https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/about-us/" target="_blank">University of Augsburg<sup>1</sup></a>
+                    </li>
+                    <li>
+                        <a href="https://www.satoh-lab.nii.ac.jp/" target="_blank">National Institute of Informatics<sup>2</sup></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="n-article">
+            <!-- teaser -->
+            <img src="images/generalpipeline.png" />
+            <div style="text-align: center;">
+                <img src="images/tablekeypoints.png" style="width: 50%;" />
+            </div>
+
+            <!-- abstract -->
+            <h2 id="abstract"> Abstract </h2>
+            <p> Analyzing a player's technique in table tennis requires knowledge of the ball's 3D trajectory and spin. 
+                While, the spin is not directly observable in standard broadcasting videos, we show that it can be inferred from the ball's trajectory in the video. 
+                We present a novel method to infer the initial spin and 3D trajectory from the corresponding 2D trajectory in a video. 
+                Without ground truth labels for broadcast videos, we train a neural network solely on synthetic data.
+                Due to the choice of our input data representation, physically correct synthetic training data, and using targeted augmentations, the network naturally generalizes to real data. 
+                Notably, these simple techniques are sufficient to achieve generalization.
+                No real data at all is required for training.
+                To the best of our knowledge, we are the first to present a method for spin and trajectory prediction in simple monocular broadcast videos, achieving an accuracy of 92% in spin classification and a 2D reprojection error of 0.19% of the image diagonal.
+			</p>
+
+            <!-- paper links -->
+            <h2 id="links"> Links </h2>
+			<p> 
+                TODO: WHERE WAS THE PAPER ACCEPTED?. 
+                Find the code, dataset and weights below. 
+            </p>
+            <div class="grid download-section">
+                <div class="download-thumb">
+                    <a href="/" target="_blank">
+                        <img class="dropshadow" src="images/reprojections.png" />
+                    </a>
+                </div>
+                <div class="download-links">
+                    <ul>
+                        <li>
+                            <a href="https://www.example.com" target="_blank"> Paper PDF</a>
+                        </li>
+                        <li>
+                            <a href="poster.pdf" target="_blank"> Poster</a>
+						<li>
+                            <a href="https://www.example.com" target="_blank"> Code on GitHub</a>
+                        </li>
+                        <li>
+                            <a href="https://mediastore.rz.uni-augsburg.de/get/9eqcpkpw02/"  target="_blank">Dataset and Weights</a> (see manual on GitHub)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+
+			<h2 id="citation"> Citation </h2>
+			<p> If you find this paper helpful, please cite it: </p>
+			<pre class="bibtex">
+@article{kienzle2025,
+    author = {Kienzle, Daniel and Sch{\"o}n, Robin and Lienhart, Rainer and Satoh, Shin'Ichi},
+    title = {Towards Ball Spin and Trajectory Analysis in Table Tennis Broadcast Videos via Physically Grounded Synthetic-to-Real Transfer},
+    journal = {IEEE/CVF International Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)},
+    year = {2025},
+    }
+			</pre>
+
+
+            <h2 id="license"> License </h2>
+            <p> 
+                The structure of this page is taken and modified from <a href="https://nvlabs.github.io/eg3d/">nvlabs.github.io/eg3d</a> which was published under the
+                <a href="https://nvlabs-fi-cdn.nvidia.com/_web/stylegan3/LICENSE.txt"> Creative Commons CC BY-NC 4.0
+                license </a>. 
+            </p>
+
+
+
+            <!--
+            <h2 id="acknowledgments"> Acknowledgments </h2>
+            <p>
+                
+            </p>
+            -->
+
+        </div>
+    </body>
+</html>
