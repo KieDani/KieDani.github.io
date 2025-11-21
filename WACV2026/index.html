@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        <title>Uplifting Table Tennis: A Robust, Real-World Application for 3D Trajectory and Spin Estimation</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Segoe+UI" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="n-title">
+            <h1> Uplifting Table Tennis: A Robust, Real-World Application for 3D Trajectory and Spin Estimation </h1>
+        </div>
+        <div class="n-byline">
+            <div class="byline">
+                <ul class="authors">
+                    <li> <a href="#" target="_blank">Daniel Kienzle<sup>1,2</sup></a> 
+                    </li>
+                    <li> <a href="#" target="_blank">Katja Ludwig<sup>1</sup></a>
+                    </li>
+                    <li> <a href="#" target="_blank">Julian Lorenz<sup>1</sup></a>
+                    </li>
+                    <li> <a href="#" target="_blank">Shin'Ichi Satoh<sup>2,3</sup></a>
+                    </li>
+                    <li> <a href="#" target="_blank">Rainer Lienhart<sup>1</sup></a>
+                    </li>
+                </ul>
+                <ul class="authors affiliations">
+                    <li>
+                        <a href="https://www.uni-augsburg.de/en/fakultaet/fai/informatik/prof/mmc/about-us/" target="_blank">University of Augsburg<sup>1</sup></a>
+                    </li>
+                    <li>
+                        <a href="https://www.satoh-lab.nii.ac.jp/" target="_blank">National Institute of Informatics<sup>2</sup></a>
+                    </li>
+                    <li>
+                        <a href="https://www.u-tokyo.ac.jp/en/" target="_blank">The University of Tokyo<sup>3</sup></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="n-article">
+            <img src="images/overview.png" alt="Pipeline Overview" />
+
+            <h2 id="abstract"> Abstract </h2>
+            <p> 
+                Obtaining the precise 3D motion of a table tennis ball from standard monocular videos is a challenging problem, as existing methods trained on synthetic data struggle to generalize to the noisy, imperfect ball and table detections of the real world.
+                To overcome this, we propose a novel two-stage pipeline that divides the problem into a front-end perception task and a back-end 2D-to-3D uplifting task.
+                This separation allows us to train the front-end components with abundant 2D supervision from our newly created TTHQ dataset, while the back-end uplifting network is trained exclusively on physically-correct synthetic data.
+                We specifically re-engineer the uplifting model to be robust to common real-world artifacts, such as missing detections and varying frame rates.
+                By integrating a ball detector and a table keypoint detector, our approach transforms a proof-of-concept uplifting method into a practical, robust, and high-performing end-to-end application for 3D table tennis trajectory and spin analysis.
+			</p>
+            
+            <div style="text-align: center;">
+                <video controls autoplay loop muted style="width: 80%">
+                    <source src="images/demo0001.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <h2 id="method"> Method </h2>
+            <p>
+                Our approach tackles the core challenge of 3D table tennis analysis: the <strong>lack of 3D ground truth</strong> in real-world footage. Existing methods trained on synthetic data often fail when applied to noisy, imperfect real-world detections. We propose a <strong>robust two-stage pipeline</strong> that bridges this gap:
+            </p>
+            
+            <h3>1. Front-End: Robust Perception</h3>
+            <p>
+                We utilize the <strong>Segformer++ architecture</strong> to detect the ball and table keypoints in high-resolution images. To train these components, we introduce the <strong>TTHQ dataset</strong>, which provides abundant 2D supervision. A cross-model filtering strategy effectively removes false positives, such as players' shoes or paddles.
+            </p>
+
+            <h3>2. Back-End: Time-Aware Uplifting</h3>
+            <p>
+                The uplifting network reconstructs the 3D trajectory and spin from the filtered 2D detections. Unlike previous "proof-of-concept" models, we engineer this network for real-world application by introducing a <strong>custom Rotary Positional Embedding (RoPE)</strong>. 
+            </p>
+            <p>
+                This embedding encodes the exact timestamp of each frame, allowing the model to naturally handle <strong>varying frame rates</strong> and <strong>missing detections</strong> caused by occlusions. This design enables the back-end to be trained exclusively on physically correct synthetic data while achieving zero-shot generalization to real video.
+            </p>
+
+            <h2 id="links"> Links </h2>
+			<p> 
+                Our paper will be published at the <strong>IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2026</strong>.
+            </p>
+            
+            <div class="grid download-section">
+                <div class="download-thumb">
+                    <a href="#" target="_blank">
+                        <img class="dropshadow" src="overview.png" style="border-radius: 5px;" />
+                    </a>
+                </div>
+                <div class="download-links">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank"> Paper PDF (Coming Soon)</a>
+                        </li>
+                        <li>
+                            <a href="poster.pdf" target="_blank"> Poster</a>
+                        </li>
+						<li>
+                            <a href="#" target="_blank"> Code on GitHub</a>
+                        </li>
+                        <li>
+                             <a href="#" target="_blank">TTHQ Dataset</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <h2 id="citation"> Citation </h2>
+			<p> If you find this paper helpful, please cite it: </p>
+			<pre class="bibtex">
+@inproceedings{kienzle2026uplifting,
+  title={Uplifting Table Tennis: A Robust, Real-World Application for 3D Trajectory and Spin Estimation},
+  author={Kienzle, Daniel and Ludwig, Katja and Satoh, Shin{'}Ichi and Lorenz, Julian and Lienhart, Rainer},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year={2026}
+}
+			</pre>
+
+            <h2 id="license"> License </h2>
+            <p> 
+                The structure of this page is taken and modified from <a href="https://nvlabs.github.io/eg3d/">nvlabs.github.io/eg3d</a> which was published under the
+                <a href="https://nvlabs-fi-cdn.nvidia.com/_web/stylegan3/LICENSE.txt"> Creative Commons CC BY-NC 4.0
+                license </a>. 
+            </p>
+        </div>
+    </body>
+</html>
